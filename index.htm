@@ -1,0 +1,291 @@
+<!doctype html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+        integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link href="./output.css" rel="stylesheet">
+    <link href="./input.css" rel="stylesheet">
+</head>
+
+<body>
+    <header class="p-4 dark:bg-gray-100 dark:text-gray-800">
+        <div class="container flex justify-between h-6 mx-auto">
+            <div class="flex justify-around  mx-9">
+                <ul class="items-stretch hidden space-x-3 lg:flex">
+                    <li class="flex">
+                        <a rel="noopener noreferrer" href="#"
+                            class="flex items-center px-4 -mb-1 text-slate-400">Tap.az</a>
+                    </li>
+                    <li class="flex">
+                        <a rel="noopener noreferrer" href="#"
+                            class="flex items-center px-4 -mb-1 text-slate-400">Bina.az</a>
+                    </li>
+                    <li class="flex">
+                        <a rel="noopener noreferrer" href="#"
+                            class="flex items-center px-4 -mb-1 text-slate-400">Boss.az</a>
+                    </li>
+                </ul>
+            </div>
+            <div class="flex">
+                <ul class="items-stretch hidden space-x-3 lg:flex">
+                    <li class="flex">
+                        <a rel="noopener noreferrer" href="#"
+                            class="flex items-center px-4 -mb-1 text-gray-400">Destek:(937)8787837</a>
+                    </li>
+                    <li class="flex">
+                        <a rel="noopener noreferrer" href="#"
+                            class="flex items-center px-4 -mb-1 text-gray-400">Yardim</a>
+                    </li>
+                    <li class="flex">
+                        <a rel="noopener noreferrer" href="#" class="flex items-center px-4 -mb-1 text-gray-400">RU</a>
+                    </li>
+                    <li class="flex">
+                        <a rel="noopener noreferrer" href="#" class="flex items-center px-4 -mb-1  text-gray-400"><i
+                                class="fa-solid fa-heart"></i>Secilmis</a>
+                    </li>
+                    <li class="flex">
+                        <a rel="noopener noreferrer" href="#" class="flex items-center px-4 -mb-1 text-gray-400 "> <i
+                                class="fa-solid fa-user"></i>Giris</a>
+                    </li>
+
+                </ul>
+            </div>
+
+        </div>
+    </header>
+
+    <div class="p-4 bg-red-600 dark:text-white">
+        <div class="container flex justify-around h-14 mx-12 ">
+            <div class="flex">
+                <a rel="noopener noreferrer" href="#" aria-label="Back to homepage" class="flex items-center p-2">
+                    <h1 class="font-bold ">TURBO.AZ</h1>
+                </a>
+                <ul class="items-stretch hidden space-x-3 lg:flex">
+                    <li class="flex " onclick="printCards()">
+                        <a rel="noopener noreferrer" href="#" class="flex items-center px-4 -mb-1 dark:border-">Bütün
+                            elanlar</a>
+                    </li>
+                    <li class="flex">
+                        <a rel="noopener noreferrer" href="#"
+                            class="flex items-center px-4 -mb-1    dark:border- dark:text-white">Avtosalonlar</a>
+                    </li>
+                    <li class="flex">
+                        <a rel="noopener noreferrer" href="#" class="flex items-center px-4 -mb-1 dark:border-">Moto</a>
+                    </li>
+                    <li class="flex">
+                        <a rel="noopener noreferrer" href="#" class="flex items-center px-4 -mb-1  dark:border-">Ehtiyat
+                            hissələri və aksesuarlar</a>
+                    </li>
+                </ul>
+            </div>
+            <div class="flex items-center md:space-x-4 ">
+                <div class="relative">
+                    <span class="absolute inset-y-0 left-0 flex items-center pl-2 ">
+                        <button type="submit" title="Search" class="p-1 focus:outline-none focus:ring">
+                            <svg fill="currentColor" viewBox="0 0 512 512" class="w-4 h-4 dark:text-gray-800">
+                                <path
+                                    d="M479.6,399.716l-81.084-81.084-62.368-25.767A175.014,175.014,0,0,0,368,192c0-97.047-78.953-176-176-176S16,94.953,16,192,94.953,368,192,368a175.034,175.034,0,0,0,101.619-32.377l25.7,62.2L400.4,478.911a56,56,0,1,0,79.2-79.195ZM48,192c0-79.4,64.6-144,144-144s144,64.6,144,144S271.4,336,192,336,48,271.4,48,192ZM456.971,456.284a24.028,24.028,0,0,1-33.942,0l-76.572-76.572-23.894-57.835L380.4,345.771l76.573,76.572A24.028,24.028,0,0,1,456.971,456.284Z">
+                                </path>
+                            </svg>
+                        </button>
+                    </span>
+                    <input type="search" oninput="search()" id="axtar" name="Search" placeholder="Search..."
+                        class="w-32 py-2 pl-10 text-sm rounded-md sm:w-auto focus:outline-none dark:bg-gray-100 dark:text-gray-800 focus:dark:bg-gray-50">
+                </div>
+                <button type="button"
+                    class="hidden px-6 py-2 font-semibold rounded lg:block bg-green-500 dark:text-gray-50"> + Yeni Elan
+                </button>
+            </div>
+            <button title="Open menu" type="button" class="p-4 lg:hidden">
+                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor"
+                    class="w-6 h-6 dark:text-gray-800">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16">
+                    </path>
+                </svg>
+            </button>
+            <div class="py-3 mx-10" id="basket">
+                <i class="fa-solid fa-basket-shopping "></i>
+                <button onclick="showBasket(true)">Basket</button>
+            </div>
+        </div>
+    </div>
+    <div class=" bg-red-600 py-3 h-12  text-white px-16">
+        <select class="bg-red-600 border-0 mx-[1.5rem]" id="carSelect" onchange="filterCars()">
+            <option value="">Bütün modeller</option>
+        </select>
+    </div>
+    <main>
+        <div id="cards" class="py-[40px] flex justify-center items-center gap-[20px] flex-wrap "></div>
+        <div id="sidebar" class="bg-red-800 fixed transition-all w-[30vw] h-[100vh] top-0 right-[-30vw]">
+            <div onclick="showBasket(false)"
+                class="text-[40px]  text-white absolute left-[20px] top-[0px] cursor-pointer">x</div>
+        </div>
+    </main>
+
+    <footer class="p-6 dark:bg-red-500 dark:text-white">
+        <div class="container grid grid-cols-2 mx-auto gap-x-3 gap-y-8 sm:grid-cols-3 md:grid-cols-4">
+            <div class="flex flex-col space-y-4">
+                <h2 class="font-medium">Getting started</h2>
+                <div class="flex flex-col space-y-2 text-sm dark:text-white">
+                    <a rel="noopener noreferrer" href="#">Installation</a>
+                    <a rel="noopener noreferrer" href="#">Release Notes</a>
+                    <a rel="noopener noreferrer" href="#">Upgrade Guide</a>
+                    <a rel="noopener noreferrer" href="#">Using with Preprocessors</a>
+                    <a rel="noopener noreferrer" href="#">Optimizing for Production</a>
+                    <a rel="noopener noreferrer" href="#">Browser Support</a>
+                    <a rel="noopener noreferrer" href="#">IntelliSense</a>
+                </div>
+            </div>
+            <div class="flex flex-col space-y-4">
+                <h2 class="font-medium">Core Concepts</h2>
+                <div class="flex flex-col space-y-2 text-sm dark:text-white">
+                    <a rel="noopener noreferrer" href="#">Utility-First</a>
+                    <a rel="noopener noreferrer" href="#">Responsive Design</a>
+                    <a rel="noopener noreferrer" href="#">Hover, Focus, &amp; Other States</a>
+                    <a rel="noopener noreferrer" href="#">Dark Mode</a>
+                    <a rel="noopener noreferrer" href="#">Adding Base Styles</a>
+                    <a rel="noopener noreferrer" href="#">Extracting Components</a>
+                    <a rel="noopener noreferrer" href="#">Adding New Utilities</a>
+                </div>
+            </div>
+            <div class="flex flex-col space-y-4">
+                <h2 class="font-medium">Customization</h2>
+                <div class="flex flex-col space-y-2 text-sm dark:text-white">
+                    <a rel="noopener noreferrer" href="#">Configuration</a>
+                    <a rel="noopener noreferrer" href="#">Theme Configuration</a>
+                    <a rel="noopener noreferrer" href="#">Breakpoints</a>
+                    <a rel="noopener noreferrer" href="#">Customizing Colors</a>
+                    <a rel="noopener noreferrer" href="#">Customizing Spacing</a>
+                    <a rel="noopener noreferrer" href="#">Configuring Variants</a>
+                    <a rel="noopener noreferrer" href="#">Plugins</a>
+                </div>
+            </div>
+            <div class="flex flex-col space-y-4">
+                <h2 class="font-medium">Community</h2>
+                <div class="flex flex-col space-y-2 text-sm dark:text-white">
+                    <a rel="noopener noreferrer" href="#">GitHub</a>
+                    <a rel="noopener noreferrer" href="#">Discord</a>
+                    <a rel="noopener noreferrer" href="#">Twitter</a>
+                    <a rel="noopener noreferrer" href="#">YouTube</a>
+                </div>
+            </div>
+        </div>
+        <div class="flex items-center justify-center px-6 pt-12 text-sm">
+            <span class="dark:text-white">© Copyright 2025. All Rights Reserved.</span>
+        </div>
+    </footer>
+    <script>
+        const data = [
+            { id: 1, marka: 'Mercedes', qiymet: '10 500', model: 'w202', mator: '2.0', il: '1998', reng: 'gray', img: 'https://turbo.azstatic.com/uploads/full/2022%2F02%2F07%2F16%2F20%2F36%2F05ae3ec7-b845-4458-8033-99eec8aec1a2%2F83217_ryHX2Q7AONB3-jC_sEJ3mQ.jpg' },
+            { id: 14, marka: 'Volkswagen', qiymet: '23 200', model: 'Golf', mator: '2.0', il: '2019', reng: 'red', img: 'https://turbo.azstatic.com/uploads/full/2023%2F02%2F17%2F15%2F03%2F28%2F97566bce-3bcb-43ff-8c96-5274fdf59360%2F74622_ZZd9ojx9ZyTk5EOyx7D3wA.jpg' },
+            { id: 2, marka: 'Kia', qiymet: '21 000', model: 'Rio', mator: '1.4', il: '2014', reng: 'silver', img: 'https://turbo.azstatic.com/uploads/full/2021%2F09%2F10%2F11%2F40%2F18%2Fbe262b8b-13ff-40ee-9664-4c7c4ea93e4b%2F94552_bf7HpneCobaNn8ooAalBwg.jpg' },
+            { id: 3, marka: 'Hyundai', qiymet: '12 000', model: 'Tucson', mator: '2.0', il: '2014', reng: 'black', img: 'https://turbo.azstatic.com/uploads/f660x496/2020%2F02%2F08%2F12%2F31%2F23%2Fdfd4bcdd-5279-4807-85cb-58aa153c900f%2F44290_Il5UqH7nhzVTrAAfdt5BuQ.jpg' },
+            { id: 4, marka: 'LADA (VAZ)', qiymet: '35 000', model: '2107', mator: '1.6', il: '2010', reng: 'black', img: 'https://turbo.azstatic.com/uploads/full/2022%2F09%2F29%2F04%2F48%2F26%2Ff85c3fb0-4f77-4157-8b15-a3122bbaf36d%2F15612_S_xRbeuG6jQhZhkc_JM3wg.jpg' },
+            { id: 5, marka: 'BMW', qiymet: '28 700', model: 'M5 e39', mator: '4.4', il: '1998', reng: 'blue', img: 'https://turbo.azstatic.com/uploads/full/2020%2F08%2F15%2F17%2F42%2F55%2F5e61d0d8-ac41-42d4-8a34-33f9c563bba8%2F4747_ZOpsrcdSRl_mByG6tDsiqQ.jpg' },
+            { id: 6, marka: 'Mercedes', qiymet: '86 500', model: 'CLS', mator: '5.5', il: '2013', reng: 'gray', img: 'https://turbo.azstatic.com/uploads/full/2021%2F12%2F09%2F01%2F51%2F22%2F2e3d6e19-baa7-4625-89e0-d358238808ce%2F21872_z_Z4BhoRifgwGf0Fz_hvJw.jpg' },
+            { id: 7, marka: 'Toyota', qiymet: '54 000', model: 'Camry', mator: '3.0', il: '2021', reng: 'white', img: 'https://turbo.azstatic.com/uploads/full/2021%2F06%2F18%2F16%2F16%2F02%2Fd4a556f8-adc6-4ff8-897b-2079ea777987%2F24971_KEan9mcELSSmUAPbxG1KEw.jpg' },
+            { id: 8, marka: 'Porche', qiymet: '118 400', model: '911 Carrera', mator: '4.4', il: '2023', reng: 'cyan', img: 'https://turbo.azstatic.com/uploads/full/2020%2F08%2F13%2F13%2F32%2F55%2F012a26df-efae-4cf0-b763-a4c3de17ae23%2F46349_cqQK5HyMFGcJOEMh1pCm1A.jpg' },
+            { id: 9, marka: 'Dodge', qiymet: '38 500', model: 'Challenger', mator: '7.2', il: '2018', reng: 'black', img: 'https://turbo.azstatic.com/uploads/full/2021%2F04%2F09%2F10%2F02%2F28%2F9a6bf393-9f08-476b-abc0-d6278f1d6668%2F37456_34ZTVBn26COoCWhsqBx3vw.jpg' },
+            { id: 10, marka: 'Nissan', qiymet: '86 000', model: 'GTR R-35', mator: '3.0', il: '2014', reng: 'black', img: 'https://turbo.azstatic.com/uploads/full/2017%2F02%2F16%2F00%2F02%2F00%2F573%2F54000_4wUHTVdrb_-kLx6BJMuF8Q.jpg' },
+            { id: 11, marka: 'Audi', qiymet: '124 100', model: 'RS7', mator: '4.0', il: '2015', reng: 'dimgrey', img: 'https://turbo.azstatic.com/uploads/full/2021%2F05%2F29%2F15%2F33%2F07%2Fc9bec2ac-97eb-4e07-bc8a-509f1898dd7d%2F82001_MmzL0_nnwbSnJI6rtabq7Q.jpg' },
+            { id: 12, marka: 'Toyota', qiymet: '15 800', model: 'Corolla', mator: '1.6', il: '2016', reng: 'white', img: 'https://turbo.azstatic.com/uploads/full/2020%2F09%2F24%2F08%2F21%2F40%2Facdc9e7e-d243-46fd-b2ce-dc51a85c8343%2F66667_OxPaAqSg8MzGM7diar5WlQ.jpg' },
+            { id: 13, marka: 'Honda', qiymet: '18 500', model: 'Civic', mator: '1.8', il: '2017', reng: 'cyan', img: 'https://turbo.azstatic.com/uploads/full/2023%2F03%2F29%2F18%2F06%2F09%2F1dc0eed8-15d4-46f9-abf5-0b772be61d2d%2F98117_r2JD4f3tCYHUBNquO-VTdQ.jpg' },
+        ]
+
+        const cards = document.getElementById('cards');
+        const sidebar = document.getElementById('sidebar');
+        const carSelect = document.getElementById("carSelect");
+        const carsOp=document.getElementById("carsOp")
+        let status = true
+
+        const printCards = () => {
+            cards.innerHTML = ''
+            data.map(item => cards.innerHTML += `<div class="container max-w-xs p-5  mx-10 rounded-md shadow-md dark:bg-white dark:text-black">
+                                                    <div class="mt-6 mb-2">
+                                                        <img src="${item.img}" alt="" class="object-cover object-center w-full rounded-md h-72 dark:bg-gray-500">
+                                                        <h1 class="text-black font-bold">${item.qiymet} AZN</h1>
+                                                        <span class="block text-xs font-medium tracki uppercase dark:text-violet-400">${item.marka}</span>
+                                                        <h2 onclick="showDet(${item.id})" class="text-xl hover:underline uppercase font-semibold tracki">${item.model}</h2>
+                                                    </div>
+                                                    <p class="card-text" style="color:${item.reng}">${item.reng}</p>
+                                                    <p class="dark:text-black ">${item.il}, ${item.mator}L</p>
+                                                </div>`)
+        }
+        printCards()
+
+        function showDet(id) {
+            const obj = data.find(item => item.id == id)
+            cards.innerHTML = ''
+            cards.innerHTML += `<section class="dark:bg-white dark:text-black">
+	<div class="container max-w-6xl p-4 mx-auto space-y-6 sm:space-y-4">
+        <h3 class="text-2xl font-semibold sm:text-4xl group-hover:underline group-focus:underline">❮❮ ${obj.marka}, ${obj.model}, ${obj.il}, ${obj.reng}</h3>
+		<a rel="noopener noreferrer" href="#" class="block max-w-sm gap-3 mx-auto sm:max-w-full group hover:no-underline focus:no-underline lg:grid lg:grid-cols-12 dark:bg-white">
+			<img src="${obj.img}" alt="" class="object-cover w-full h-64 rounded sm:h-96 lg:col-span-7 dark:bg-gray-500">
+			<div class="p-6 space-y-2 lg:col-span-5">
+                <h1 class="font-bold">Qiymet: ${obj.qiymet}AZN</h1>
+                <div class="w-60 flex flex-row gap-5">
+                    <img src="${obj.img}" class="w-20  inset-0 object-cover object-center" alt="">
+                    <p class="block text-black font-bold w-24">Autlox Azerbaijan -- ${obj.marka}</p>
+                    <p class="w-10  text-gray-500 ">Resmi numayende</p>
+                    
+                </div>
+                <button type="button" class=" px-8 py-3  font-semibold border rounded dark:text-white  bg-lime-600">📞 Zəng et</button>
+                <h3>That's Only One</h3>
+                <p class=" text-gray-500 ">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Aperiam dolorem inventore repellat doloribus, quaerat veritatis!</p>
+                <button type="button" class="px-8 flex items-center justify-center   py-3 font-semibold border rounded dark:text-white bg-blue-500">Salona keç</button>
+			</div>
+		</a>
+        </div>`
+        }
+
+        function search() {
+            cards.innerHTML = ''
+            data.filter(item => item.marka.toLowerCase().startsWith(axtar.value.toLowerCase()))
+                .map(item => cards.innerHTML += `<div class="container max-w-xs p-5  mx-10 rounded-md shadow-md dark:bg-white dark:text-black">
+                                                    <div class="mt-6 mb-2">
+                                                        <img src="${item.img}" alt="" class="object-cover object-center w-full rounded-md h-72 dark:bg-gray-500">
+                                                        <h1 class="text-black font-bold">${item.qiymet} AZN</h1>
+                                                        <span class="block text-xs font-medium tracki uppercase dark:text-violet-400">${item.marka}</span>
+                                                        <h2 onclick="showDet(${item.id})" class="text-xl hover:underline uppercase font-semibold tracki">${item.model}</h2>
+                                                    </div>
+                                                    <p class="card-text" style="color:${item.reng}">${item.reng}</p>
+                                                    <p class="dark:text-black ">${item.il}, ${item.mator}L</p>
+                                                </div>`)
+        }
+
+        function filterCars() {
+            cards.innerHTML=''
+            data.filter(item=>item.marka.startsWith(carSelect.value) )
+            .map(item=> cards.innerHTML+= `<div class="container max-w-xs p-5  mx-10 rounded-md shadow-md dark:bg-white dark:text-black">
+                                                    <div class="mt-6 mb-2">
+                                                        <img src="${item.img}" alt="" class="object-cover object-center w-full rounded-md h-72 dark:bg-gray-500">
+                                                        <h1 class="text-black font-bold">${item.qiymet} AZN</h1>
+                                                        <span class="block text-xs font-medium tracki uppercase dark:text-violet-400">${item.marka}</span>
+                                                        <h2 onclick="showDet(${item.id})" class="text-xl hover:underline uppercase font-semibold tracki">${item.model}</h2>
+                                                    </div>
+                                                    <p class="card-text" style="color:${item.reng}">${item.reng}</p>
+                                                    <p class="dark:text-black ">${item.il}, ${item.mator}L</p>
+                                                </div>`)
+        }
+        filterCars();
+
+        function opChange(){
+            carSelect.innerHTML=''
+            carSelect.innerHTML+=`<option>Bütün maşınlar</option>`
+            data.filter(item=> item.marka)
+            .map(item=> carSelect.innerHTML+=`<option>${item.marka}</option>`)
+        }
+        opChange()
+
+        function showBasket() {
+            sidebar.style.right = status ? '0' : '-230vw'
+            status = !status
+        }
+    </script>
+</body>
+
+</html>
